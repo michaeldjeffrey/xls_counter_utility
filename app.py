@@ -22,8 +22,7 @@ def index_post(file, **kwargs):
     filename = filename[0] if filename[0] else 'Student Counter'
 
     # variables to use, bruh
-    folder = 'export/'
-    destination_filename = "{}{}.xls".format(folder, filename)
+    destination_filename = "{}.xls".format(filename)
     accetable_null_values = ['-', '=', '+']
     student_attendance = Counter()
 
@@ -51,7 +50,7 @@ def index_post(file, **kwargs):
     wb.save(filename=destination_filename)
 
     return send_file(destination_filename,
-    		attachment_filename=destination_filename,
+    		attachment_filename=filename,
     		as_attachment=True,
     		mimetype='application/vnd.ms-excel')
 
