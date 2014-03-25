@@ -47,7 +47,7 @@ def index_post(file, **kwargs):
         sheet.cell("B{}".format(index)).value = value
         index += 1
 
-    wb.save(filename="exports/{}".format((destination_filename))
+    wb.save(filename="exports/{}".format(destination_filename))
 
     return send_file(destination_filename, 
         attachment_filename=destination_filename,
