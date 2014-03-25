@@ -21,7 +21,7 @@ def index_post(file, **kwargs):
     filename = kwargs.pop('destination_filename')
     filename = filename[0] if filename[0] else 'Student Counter'
 
-    # variables to use
+    # variables to use, bruh
     destination_filename = "{}.xls".format(filename)
     accetable_null_values = ['-', '=', '+']
     student_attendance = Counter()
