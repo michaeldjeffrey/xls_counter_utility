@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>Student Attendance Tracker</h1>
+                <p class="text-muted"> Count the reoccurrence of items in an Excel spreadsheet. </p>
+                <hr>
+                <h4>Instructions:</h4>
+                <ul>
+                    <li><code>Must be excel file.</code></li>
+                    <li><code>Defaults are already inputted.</code></li>
+                    <li><code>Currently only works with numbers.</code></li>
+                </ul>
+                <hr>
+            </div>
+        </div>
+
+        <form enctype='multipart/form-data' method='post' action=''>
+            <div class="row form-group">
+                <div class="col-xs-4">
+                    <label>Save File as...</label>
+                    <input class='form-control' name='destination_filename' type='text' placeholder='Student Counter.xls'>
+                </div>
+                <div class="col-xs-4">
+                    <label>Start at row...</label>
+                    <input class='form-control' type="number" name="starting_point" placeholder="3">
+                </div>
+                <div class="col-xs-4">
+                    <label>Column to look in...</label>
+                    <input class='form-control' type="text" name="id_column" placeholder="A">
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-xs-12">
+                    <input class='form-control' name='file' type='file'>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <input class='btn btn-primary' type='submit' value='Submit'>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
