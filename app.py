@@ -13,7 +13,7 @@ def index_post(file, **kwargs):
 
     # set the variables for reading and writing
     starting_point = kwargs.pop('starting_point')
-    starting_point = starting_point[0] if starting_point[0] else 3
+    starting_point = int(starting_point[0]) if starting_point[0] else 3
 
     column = kwargs.pop('id_column')
     column = column[0] if column[0] else 'A'
